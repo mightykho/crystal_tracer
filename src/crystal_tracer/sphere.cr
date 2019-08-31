@@ -3,7 +3,8 @@ class Sphere
     center: Point,
     radius: Float64,
     color: Color,
-    roughness: Float64
+    roughness: Float64,
+    emission: { type: Float64, default: 0.0 }
   )
 
   def intersect(ray : Ray)
@@ -25,6 +26,8 @@ class Sphere
   end
 
   def get_color(probe : Color)
+    return color * emission if light_source?
+
     color * probe
   end
 
@@ -41,5 +44,9 @@ class Sphere
 
   private def normal(hit_point : Point)
     Vector3.new(center, hit_point).normalize
+  end
+
+  private def light_source?
+    emission > 0
   end
 end

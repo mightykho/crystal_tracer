@@ -23,6 +23,6 @@ class Renderer
       color += scene.get_color(ray, scene.ray_bounces)
     end
 
-    color / scene.samples.to_f
+    (color / scene.samples.to_f).clamp
   end
 end
