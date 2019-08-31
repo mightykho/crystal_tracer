@@ -22,4 +22,18 @@ class Sphere
 
     {self, oi}
   end
+
+  def get_color(probe : Color)
+    color * probe
+  end
+
+  def scatter(hit_point : Point)
+    direction = normal(hit_point) + Vector3.random_unit
+
+    Ray.new(hit_point, direction)
+  end
+
+  private def normal(hit_point : Point)
+    Vector3.new(center, hit_point).normalize
+  end
 end

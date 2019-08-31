@@ -20,7 +20,7 @@ class Renderer
 
     (0...scene.samples).each do |_sample|
       ray = camera.build_ray_through(x, y)
-      color += scene.get_color(ray)
+      color += scene.get_color(ray, scene.ray_bounces)
     end
 
     color / scene.samples.to_f
