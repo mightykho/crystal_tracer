@@ -1,0 +1,18 @@
+name: crystal_tracer
+version: 0.1.0
+
+authors:
+  - Stepan Khodzhaian <stepan.khodzhaian@carwow.co.uk>
+
+targets:
+  crystal_tracer:
+    main: src/crystal_tracer.cr
+
+crystal: 0.29.0
+
+license: MIT
+
+dependencies:
+  stumpy_png:
+    github: stumpycr/stumpy_png
+    version: "~> 4.4.1"
