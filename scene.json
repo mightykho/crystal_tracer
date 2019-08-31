@@ -3,5 +3,12 @@
   "height": 400,
   "samples": 10,
   "bg_start": [1, 1, 1],
-  "bg_end" : [0.5, 0.7, 1.0]
+  "bg_end" : [0.5, 0.7, 1.0],
+  "geometry": [
+    {
+      "center": [0, 0, -1],
+      "radius": 0.5,
+      "color": [0, 1, 0]
+    }
+  ]
 }

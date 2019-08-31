@@ -6,6 +6,7 @@ require "./crystal_tracer/ray"
 require "./crystal_tracer/scene"
 require "./crystal_tracer/renderer"
 require "./crystal_tracer/camera"
+require "./crystal_tracer/sphere"
 
 module CrystalTracer
   VERSION = "0.1.0"
