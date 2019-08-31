@@ -19,7 +19,7 @@ class Scene
     sphere, distance = intersections.min_by { |i| i[1] }
 
     hit_point = ray.point_at_parameter(distance)
-    new_ray = sphere.scatter(hit_point)
+    new_ray = sphere.scatter(ray, hit_point)
 
     color_probe = get_color(new_ray, depth - 1)
 

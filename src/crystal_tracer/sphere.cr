@@ -2,7 +2,8 @@ class Sphere
   JSON.mapping(
     center: Point,
     radius: Float64,
-    color: Color
+    color: Color,
+    roughness: Float64
   )
 
   def intersect(ray : Ray)
@@ -27,10 +28,15 @@ class Sphere
     color * probe
   end
 
-  def scatter(hit_point : Point)
-    direction = normal(hit_point) + Vector3.random_unit
+  def scatter(ray : Ray, hit_point : Point)
+    normal = normal(hit_point)
 
-    Ray.new(hit_point, direction)
+    reflect_direction = ray.direction.reflect(normal) * (1 - roughness)
+    diffuse_direction = (normal + Vector3.random_unit) * roughness
+
+    result_direction = (reflect_direction + diffuse_direction).normalize
+
+    Ray.new(hit_point, result_direction)
   end
 
   private def normal(hit_point : Point)
