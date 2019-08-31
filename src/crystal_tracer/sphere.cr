@@ -14,6 +14,12 @@ class Sphere
 
     sc = Math.sqrt(oc.square_len - os * os)
 
-    sc < radius
+    return nil if os < 0 || sc >= radius
+
+    is = Math.sqrt(radius * radius - sc * sc)
+
+    oi = os - is
+
+    {self, oi}
   end
 end

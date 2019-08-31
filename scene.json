@@ -6,6 +6,11 @@
   "bg_end" : [0.5, 0.7, 1.0],
   "geometry": [
     {
+      "center": [0, -100.5, -1],
+      "radius": 100,
+      "color": [1, 0, 0]
+    },
+    {
       "center": [0, 0, -1],
       "radius": 0.5,
       "color": [0, 1, 0]
