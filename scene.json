@@ -1,25 +1,56 @@
 {
-  "width": 800,
-  "height": 400,
-  "samples": 100,
+  "width": 1600,
+  "height": 800,
+  "samples": 5000,
   "ray_bounces": 20,
   "bg_start": [1, 1, 1],
   "bg_end" : [0.5, 0.7, 1.0],
   "geometry": [
-   {
-      "center": [0, -100.5, -1],
-      "radius": 100,
+    {
+      "center": [0, 12.5, -4],
+      "radius": 8.1,
       "color": [1, 1, 1],
-      "roughness": 0.8
+      "emission": 10.0,
+      "roughness": 1
     },
     {
-      "center": [-0.5, 0, -1],
-      "radius": 0.5,
+      "center": [0, 10004.5, -1],
+      "radius": 10000,
+      "color": [1, 1, 1],
+      "roughness": 1
+    },
+    {
+      "center": [0, -10001.5, -1],
+      "radius": 10000,
+      "color": [1, 1, 1],
+      "roughness": 1
+    },
+    {
+      "center": [10003, -3, -2],
+      "radius": 10000,
+      "color": [0, 1, 0],
+      "roughness": 1
+    },
+    {
+      "center": [0, -3, -10005.5],
+      "radius": 10000,
+      "color": [1, 1, 1],
+      "roughness": 1
+    },
+    {
+      "center": [-10003, -3, -2],
+      "radius": 10000,
+      "color": [1, 0, 0],
+      "roughness": 1
+    },
+    {
+      "center": [-0.8, -0.5, -4],
+      "radius": 1,
       "color": [0.78, 0.6, 0.78],
       "roughness": 1
     },
     {
-      "center": [0.5, 0, -1],
+      "center": [1, -1, -2.5],
       "radius": 0.5,
       "color": [0.8, 0.49, 0.19],
       "roughness": 0
