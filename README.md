@@ -1,27 +1,22 @@
-# crystal_tracer_v2
+# Crystal tracer
 
-TODO: Write a description here
+This is a very basic raytrace renderer written in Crystal for my talk "Computer Graphics for Ruby developers".
 
-## Installation
+Please take into account that this project is not optimised in any way and only uses single process. 
 
-TODO: Write installation instructions here
 
-## Usage
+## How to use
 
-TODO: Write usage instructions here
+You can use already compiled binary
+```
+SCENE=./scene.json ./crystal_tracer
+```
 
-## Development
+Or you can compile your own version:
+```
+shards install; crystal build src/crystal_tracer.cr --release;
+```
 
-TODO: Write development instructions here
+Render output will be saved in `output.png` within projects root direcrtory.
 
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/crystal_tracer_v2/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [Stepan Khodzhaian](https://github.com/your-github-user) - creator and maintainer
+![alt text](https://raw.githubusercontent.com/mightykho/crystal_tracer/master/output.png "Cornell box example")
